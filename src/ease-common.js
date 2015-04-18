@@ -10,6 +10,9 @@ function flip(fn) {
 
 export default {
   interpolate,
+
+  flip,
+
   createEasing(fn) {
     let fnFlipped = flip(fn);
     return {
@@ -18,6 +21,12 @@ export default {
       },
       easeOut(x, from, to) {
         return interpolate(fnFlipped(x), from, to);
+      },
+      easeInOut(x, from, to) {
+        const y = (x < 0.5) ?
+          (fn(2 * x) * 0.5) :
+          (0.5 + fnFlipped(2* (x - 0.5)) * 0.5);
+        return interpolate(y, from, to);
       }
     };
   }
