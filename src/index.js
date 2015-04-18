@@ -1,4 +1,7 @@
 "use strict";
+let {interpolate} = require('./ease-common');
+let {EasingPower2, EasingPower3, EasingPower4} = require('./ease-powers');
+let {EasingExponential} = require('./ease-exponential');
 let Rx;
 const DEFAULT_INTERVAL = 15;
 
@@ -16,7 +19,7 @@ function RxTween({
   from,
   to,
   duration,
-  ease = 'RxTween.Linear.ease',
+  ease = RxTween.Linear.ease,
   interval = 'auto'
 }) {
   Rx = Rx || require('rx');
@@ -24,11 +27,14 @@ function RxTween({
   const totalTicks = Math.round(duration / interval);
   return Rx.Observable.interval(interval)
     .take(totalTicks)
-    .map(x => {
-      const percent = x / totalTicks;
-      return (from* (1 - percent) + to * percent);
-    })
+    .map(tick => ease(tick / totalTicks, from, to))
     .concat(Rx.Observable.just(to));
 }
+
+RxTween.Linear = {ease: interpolate};
+RxTween.Power2 = EasingPower2;
+RxTween.Power3 = EasingPower3;
+RxTween.Power4 = EasingPower4;
+RxTween.Exp = EasingExponential;
 
 export default RxTween;
