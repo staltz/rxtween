@@ -1,0 +1,37 @@
+{
+  "name": "rxtween",
+  "version": "0.1.0",
+  "description": "A library for creating animation-related RxJS Observables",
+  "author": "Andre Staltz (http://andre.staltz.com/)",
+  "license": "MIT",
+  "keywords": [
+    "rx",
+    "rxjs",
+    "tween",
+    "animation"
+  ],
+  "homepage": "https://github.com/staltz/rxtween",
+  "bugs": "https://github.com/staltz/rxtween/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/staltz/rxtween"
+  },
+  "main": "lib/index.js",
+  "devDependencies": {
+    "babel": "^5.1.10",
+    "jscs": "^1.12.0",
+    "jshint": "^2.7.0",
+    "rx": "^2.5.2"
+  },
+  "scripts": {
+    "jshint": "jshint src/",
+    "jscs": "jscs src/",
+    "compile-lib": "babel -d lib/ src/",
+    "prepublish": "npm run compile-lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm run release-patch",
+    "release-patch": "npm version patch && git push origin master --tags && npm publish",
+    "release-minor": "npm version minor && git push origin master --tags && npm publish",
+    "release-major": "npm version major && git push origin master --tags && npm publish"
+  }
+}
