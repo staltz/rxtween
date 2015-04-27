@@ -1,9 +1,10 @@
 "use strict";
+let Rx;
 let {interpolate} = require('./ease-common');
 let {EasingPower2, EasingPower3, EasingPower4} = require('./ease-powers');
 let {EasingExponential} = require('./ease-exponential');
 let {EasingBack} = require('./ease-back');
-let Rx;
+let {EasingBounce} = require('./ease-bounce');
 const DEFAULT_INTERVAL = 15;
 
 function sanitizeInterval(interval) {
@@ -38,5 +39,6 @@ RxTween.Power3 = EasingPower3;
 RxTween.Power4 = EasingPower4;
 RxTween.Exp = EasingExponential;
 RxTween.Back = EasingBack;
+RxTween.Bounce = EasingBounce;
 
 export default RxTween;
