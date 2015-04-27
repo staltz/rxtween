@@ -5,6 +5,8 @@ let {EasingPower2, EasingPower3, EasingPower4} = require('./ease-powers');
 let {EasingExponential} = require('./ease-exponential');
 let {EasingBack} = require('./ease-back');
 let {EasingBounce} = require('./ease-bounce');
+let {EasingCirc} = require('./ease-circ');
+let {EasingElastic} = require('./ease-elastic');
 const DEFAULT_INTERVAL = 15;
 
 function sanitizeInterval(interval) {
@@ -40,5 +42,7 @@ RxTween.Power4 = EasingPower4;
 RxTween.Exp = EasingExponential;
 RxTween.Back = EasingBack;
 RxTween.Bounce = EasingBounce;
+RxTween.Circ = EasingCirc;
+RxTween.Elastic = EasingElastic;
 
 export default RxTween;
