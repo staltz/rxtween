@@ -2,6 +2,7 @@
 let {interpolate} = require('./ease-common');
 let {EasingPower2, EasingPower3, EasingPower4} = require('./ease-powers');
 let {EasingExponential} = require('./ease-exponential');
+let {EasingBack} = require('./ease-back');
 let Rx;
 const DEFAULT_INTERVAL = 15;
 
@@ -36,5 +37,6 @@ RxTween.Power2 = EasingPower2;
 RxTween.Power3 = EasingPower3;
 RxTween.Power4 = EasingPower4;
 RxTween.Exp = EasingExponential;
+RxTween.Back = EasingBack;
 
 export default RxTween;
