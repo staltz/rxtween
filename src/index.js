@@ -7,6 +7,7 @@ let {EasingBack} = require('./ease-back');
 let {EasingBounce} = require('./ease-bounce');
 let {EasingCirc} = require('./ease-circ');
 let {EasingElastic} = require('./ease-elastic');
+let {EasingSine} = require('./ease-sine');
 const DEFAULT_INTERVAL = 15;
 
 function sanitizeInterval(interval) {
@@ -44,5 +45,6 @@ RxTween.Back = EasingBack;
 RxTween.Bounce = EasingBounce;
 RxTween.Circ = EasingCirc;
 RxTween.Elastic = EasingElastic;
+RxTween.Sine = EasingSine;
 
 export default RxTween;
