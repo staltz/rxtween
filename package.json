@@ -19,13 +19,11 @@
   "main": "lib/index.js",
   "devDependencies": {
     "babel": "^5.1.10",
-    "jscs": "^1.12.0",
-    "jshint": "^2.7.0",
+    "eslint": "^0.20.0",
     "rx": "^2.5.2"
   },
   "scripts": {
-    "jshint": "jshint src/",
-    "jscs": "jscs src/",
+    "lint": "eslint src/",
     "compile-lib": "babel -d lib/ src/",
     "prepublish": "npm run compile-lib",
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -11,4 +11,4 @@ let EasingExponential = createEasing(expFn);
 
 export default {
   EasingExponential
-}
+};

@@ -5,7 +5,7 @@ function interpolate(y, from, to) {
 }
 
 function flip(fn) {
-  return (x => 1 - fn(1 - x));
+  return x => 1 - fn(1 - x);
 }
 
 export default {
@@ -25,9 +25,9 @@ export default {
       easeInOut(x, from, to) {
         const y = (x < 0.5) ?
           (fn(2 * x) * 0.5) :
-          (0.5 + fnFlipped(2* (x - 0.5)) * 0.5);
+          (0.5 + fnFlipped(2 * (x - 0.5)) * 0.5);
         return interpolate(y, from, to);
       }
     };
   }
-}
+};

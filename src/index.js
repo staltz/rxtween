@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 let Rx;
 let {interpolate} = require('./ease-common');
 let {EasingPower2, EasingPower3, EasingPower4} = require('./ease-powers');
@@ -8,8 +8,8 @@ let {EasingBounce} = require('./ease-bounce');
 let {EasingCirc} = require('./ease-circ');
 let {EasingElastic} = require('./ease-elastic');
 let {EasingSine} = require('./ease-sine');
-const DEFAULT_INTERVAL = 15;
 
+const DEFAULT_INTERVAL = 15;
 function sanitizeInterval(interval) {
   if (interval === 'auto') {
     return DEFAULT_INTERVAL;
@@ -28,9 +28,9 @@ function RxTween({
   interval = 'auto'
 }) {
   Rx = Rx || require('rx');
-  interval = sanitizeInterval(interval);
-  const totalTicks = Math.round(duration / interval);
-  return Rx.Observable.interval(interval)
+  let sanitizedInterval = sanitizeInterval(interval);
+  const totalTicks = Math.round(duration / sanitizedInterval);
+  return Rx.Observable.interval(sanitizedInterval)
     .take(totalTicks)
     .map(tick => ease(tick / totalTicks, from, to))
     .concat(Rx.Observable.just(to));
