@@ -1,5 +1,5 @@
 'use strict';
-let Rx;
+let Rx = require('rx');
 let {interpolate} = require('./ease-common');
 let {EasingPower2, EasingPower3, EasingPower4} = require('./ease-powers');
 let {EasingExponential} = require('./ease-exponential');
@@ -27,7 +27,6 @@ function RxTween({
   ease = RxTween.Linear.ease,
   interval = 'auto'
 }) {
-  Rx = Rx || require('rx');
   let sanitizedInterval = sanitizeInterval(interval);
   const totalTicks = Math.round(duration / sanitizedInterval);
   return Rx.Observable.interval(sanitizedInterval)

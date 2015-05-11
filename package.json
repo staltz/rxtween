@@ -17,10 +17,12 @@
     "url": "https://github.com/staltz/rxtween"
   },
   "main": "lib/index.js",
+  "peerDependencies": {
+    "rx": "2.x.x"
+  },
   "devDependencies": {
     "babel": "^5.1.10",
-    "eslint": "^0.20.0",
-    "rx": "^2.5.2"
+    "eslint": "^0.20.0"
   },
   "scripts": {
     "lint": "eslint src/",
