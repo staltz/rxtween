@@ -24,6 +24,7 @@
   },
   "scripts": {
     "lint": "eslint src/",
+    "precompile-lib": "rm -rf lib/ && mkdir -p lib",
     "compile-lib": "babel -d lib/ src/",
     "prepublish": "npm run compile-lib",
     "test": "echo \"Error: no test specified\" && exit 1",
