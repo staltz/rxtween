@@ -22,14 +22,15 @@
   },
   "devDependencies": {
     "babel": "^5.1.10",
-    "eslint": "^0.20.0"
+    "eslint": "^0.20.0",
+    "tape": "^4.0.0"
   },
   "scripts": {
     "lint": "eslint src/",
     "precompile-lib": "rm -rf lib/ && mkdir -p lib",
     "compile-lib": "babel -d lib/ src/",
     "prepublish": "npm run compile-lib",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "babel-node --optional es7.objectRestSpread ./test/index.js",
     "release": "npm run release-patch",
     "release-patch": "npm version patch && git push origin master --tags && npm publish",
     "release-minor": "npm version minor && git push origin master --tags && npm publish",
