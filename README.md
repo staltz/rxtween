@@ -35,6 +35,279 @@ let position$ = RxTween({
 
 `RxTween()` factory function returns an `Rx.Observable.interval` Observable mapped to the correct interpolated values according to `from`, `to`, and `duration`. This whole sequence of values lasts `duration` milliseconds.
 
+# Easing functions
+
+### `RxTween.Linear.ease`
+
+```
+|                    #
+|                   # 
+|                  #  
+|                 #   
+|                #    
+|               #     
+|              #      
+|             #       
+|            #        
+|           #         
+|          #          
+|         #           
+|        #            
+|       #             
+|      #              
+|     #               
+|    #                
+|   #                 
+|  #                  
+| #                   
+|#                    
++---------------------
+```
+
+### `RxTween.Power2.easeIn`
+
+```
+|                    #
+|                     
+|                   # 
+|                     
+|                  #  
+|                     
+|                 #   
+|                #    
+|                     
+|               #     
+|              #      
+|                     
+|             #       
+|            #        
+|           #         
+|          #          
+|         #           
+|        #            
+|      ##             
+|    ##               
+|####                 
++---------------------
+```
+
+### `RxTween.Power3.easeIn`
+
+```
+|                    #
+|                     
+|                     
+|                   # 
+|                     
+|                  #  
+|                     
+|                     
+|                 #   
+|                     
+|                #    
+|                     
+|               #     
+|              #      
+|                     
+|             #       
+|            #        
+|          ##         
+|         #           
+|      ###            
+|######               
++---------------------
+```
+
+### `RxTween.Power4.easeIn`
+
+```
+|                    #
+|                     
+|                     
+|                     
+|                   # 
+|                     
+|                     
+|                  #  
+|                     
+|                     
+|                 #   
+|                     
+|                #    
+|                     
+|               #     
+|              #      
+|             #       
+|            #        
+|           #         
+|        ###          
+|########             
++---------------------
+```
+
+### `RxTween.Exp.easeIn`
+
+```
+|                    #
+|                     
+|                     
+|                     
+|                     
+|                   # 
+|                     
+|                     
+|                     
+|                  #  
+|                     
+|                     
+|                 #   
+|                     
+|                #    
+|                     
+|               #     
+|              #      
+|            ##       
+|         ###         
+|#########            
++---------------------
+```
+
+### `RxTween.Back.easeIn`
+
+```
+|                    #
+|                     
+|                     
+|                     
+|                   # 
+|                     
+|                     
+|                     
+|                  #  
+|                     
+|                     
+|                 #   
+|                     
+|                     
+|                #    
+|                     
+|               #     
+|                     
+|              #      
+|                     
+|#____________#       
++---------------------
+```
+
+### `RxTween.Bounce.easeIn`
+
+```
+|                   ##
+|                     
+|                  #  
+|                 #   
+|                     
+|                     
+|                #    
+|                     
+|                     
+|               #     
+|                     
+|                     
+|                     
+|                     
+|              #      
+|        ###          
+|           #         
+|       #             
+|            #        
+|   ####      #       
+|###                  
++---------------------
+```
+
+### `RxTween.Circ.easeIn`
+
+```
+|                    #
+|                     
+|                     
+|                     
+|                     
+|                     
+|                   # 
+|                     
+|                     
+|                  #  
+|                     
+|                 #   
+|                #    
+|               #     
+|              #      
+|             #       
+|            #        
+|          ##         
+|        ##           
+|     ###             
+|#####                
++---------------------
+```
+
+### `RxTween.Elastic.easeIn`
+
+```
+|                    #
+|                     
+|                     
+|                     
+|                     
+|                     
+|                     
+|                     
+|                     
+|                     
+|                     
+|                     
+|                     
+|                   # 
+|                     
+|                     
+|                     
+|                     
+|              ##     
+|             #       
+|####___###___   ___  
++---------------------
+```
+
+### `RxTween.Sine.easeIn`
+
+```
+|                    #
+|                     
+|                   # 
+|                  #  
+|                     
+|                 #   
+|                #    
+|                     
+|               #     
+|              #      
+|             #       
+|                     
+|            #        
+|           #         
+|          #          
+|         #           
+|        #            
+|       #             
+|     ##              
+|   ##                
+|###                  
++---------------------
+```
+
+
 # Thanks
 
 This project is a grateful recipient of the [Futurice Open Source sponsorship program](http://futurice.com/blog/sponsoring-free-time-open-source-activities?utm_source=github&utm_medium=spice&utm_campaign=rxtween).
