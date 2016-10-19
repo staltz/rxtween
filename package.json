@@ -18,7 +18,7 @@
   },
   "main": "lib/index.js",
   "peerDependencies": {
-    "rx": "2.x.x"
+    "rx": "4.x.x"
   },
   "devDependencies": {
     "babel": "^5.1.10",
