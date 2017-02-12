@@ -3,6 +3,8 @@ RxTween
 
 [![npm version](https://badge.fury.io/js/rxtween.svg)](http://badge.fury.io/js/rxtween)
 
+**NOT ACTIVELY MAINTAINED. I'M LOOKING FOR A NEW MAINTAINER/OWNER FOR THIS REPOSITORY. [Contact me](http://staltz.com/) if you are interested.**
+
 A small helper library to create animation-related RxJS Observables. Specify a start value, an end value, the duration, and an easing function, and you get an Observable emitting the interpolated values in intervals over time.
 
 # Get started
